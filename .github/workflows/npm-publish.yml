@@ -4,12 +4,12 @@ on:
   workflow_call:
     inputs:
       node_version:
-        description: 'Defines the node version setup to run the publish job.'
+        description: Defines the node version setup to run the publish job.
         default: 18
         required: false
         type: number
       tag:
-        description: 'Defines the tag name used to tag the published version on npm.'
+        description: Defines the tag name used to tag the published version on npm.
         required: false
         type: string
       npm_version_command:
@@ -27,13 +27,13 @@ on:
         required: false
         type: boolean
       install_cmd:
-        description: "Defines the install command to be run. Defaults to `npm ci`."
+        description: Defines the install command to be run. Defaults to `npm ci`.
         default: npm ci
         required: false
         type: string
     secrets:
       npm_auth_token:
-        description: 'The npm access token used to publish the package'
+        description: The npm access token used to publish the package
         required: true
 
 jobs:
@@ -46,7 +46,7 @@ jobs:
         with:
           node-version: ${{ inputs.node_version }}
           registry-url: 'https://registry.npmjs.org'
-          cache: 'npm'
+          cache: npm
 
       - name: install
         run: ${{ inputs.install_cmd }}
