@@ -10,6 +10,6 @@ Any plugins hosted here are NOT affiliated with the Homebridge project. We are n
 
 If, for any reason, you can no longer maintain your plugin, please reach out to the Homebridge collaborators on Discord or open an issue at:
 
-- [https://github.com/homebridge/plugins](https://github.com/homebridge/plugins/issues/new?assignees=&labels=request-abandon&projects=&template=4_abandon-request.yml&title=Abandon+Request%3A+homebridge-)
+- [https://github.com/homebridge/plugins](https://github.com/homebridge/plugins/issues/new?assignees=&labels=request-transfer&projects=&template=3_transfer-request.yml&title=Transfer+Request%3A+homebridge-)
 
 Essentially you transfer ownership over to this organization, and we will give you admin access to your plugin's repo. You can still continue to maintain on an irregular basis if you so choose. However, the assumption will be made that you are no longer committed to the plugin. We will hold onto the plugin and if someone comes along and requests to become the new maintainer, we will transfer ownership over to that person. However, we can request that you (the original plugin author) still be given admin access.
