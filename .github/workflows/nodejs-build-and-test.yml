@@ -29,13 +29,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node_version: [18, 20]
+        node_version: [18, 20, 22]
 
     runs-on: ${{ inputs.runs_on }}
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node_version }}
           registry-url: 'https://registry.npmjs.org'
@@ -63,7 +63,7 @@ jobs:
 
       - name: Coveralls Parallel
         if: ${{ inputs.enable_coverage }}
-        uses: coverallsapp/github-action@master
+        uses: coverallsapp/github-action@v2
         with:
           github-token: ${{ secrets.github_token }}
           flag-name: run-${{ matrix.node_version }}
@@ -79,7 +79,7 @@ jobs:
 
     steps:
       - name: Coveralls Finished
-        uses: coverallsapp/github-action@master
+        uses: coverallsapp/github-action@v2
         with:
           github-token: ${{ secrets.token }}
           parallel-finished: true

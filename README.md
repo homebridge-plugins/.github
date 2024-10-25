@@ -1,6 +1,13 @@
-# The global `.github` for all Homebridge projects
+<p align="center">
+  <a href="https://homebridge.io"><img src="https://raw.githubusercontent.com/homebridge/branding/latest/logos/homebridge-color-round-stylized.png" height="140"></a>
+</p>
+<span align="center">
 
-This projects contains any sort of common and community health files for the Homebridge organization
+# `.github`
+
+</span>
+
+This project contains any sort of common and community health files for the Homebridge organization
 to be maintained in a central space.
 
 ## Reusable GitHub Workflows
@@ -20,10 +27,10 @@ on:
 
 jobs:
   call-workflow:
-    uses: homebridge/.github/.github/workflows/example-workflow.yml@latest
+    uses: homebridge-plugins/.github/.github/workflows/example-workflow.yml@latest
 
   call-workflow-passing-data:
-    uses: homebridge/.github/.github/workflows/example-workflow.yml@latest
+    uses: homebridge-plugins/.github/.github/workflows/example-workflow.yml@latest
     with:
       username: mona
     secrets:
